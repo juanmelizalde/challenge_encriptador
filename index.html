@@ -10,29 +10,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lobster&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
-    
+    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+  
 </head>
 
 <body>
-  <!-- provando comit -->
-    <header>
-        <img class="logo" src="imagenes/Logo.png " >
-    </header>
+   
+    
     <main>
-        <div>
-            <div clase="contenedor">
-                <form class="encriptador_form">
-                    <div class="cuadrodetexto">
-                        <textarea name="entradaDeTexto" id="texto" placeholder="Ingrese el texto aqui" required></textarea>
-                    </div>
-                </form>
-                <div class="img_encriptar">
-                    <!-- <img src="imagenes/encriptar.png" alt=""> -->
-                </div>
-            
-            </div>    
-        </div>
+       <header>
+         <img class="logo" src="imagenes/Logo.png " > 
+        </header> 
+        <section class="izquierda">    
+                    <form >
+                           <textarea name= "textoIntro"  id="texto" placeholder="Ingrese el texto aquí" onclick="entradaDeTexto();" onkeyup="mayuscula();" required autofocus ></textarea>
+                        <div class="msj">
+                            <img src="imagenes/info.png" alt=""> 
+                            <p>Solo letra minúscula sin acentos</p>   
+                            
+                        </div>
+                        <div class="botones">
+                           <button type="button" onclick="botonencriptar()"class="boton_E">Encriptar</button>
+                           <button type="button" onclick="botondesencriptar()"class="boton_D">Desencriptar</button>
+                        </div>
+                    </form> 
+                    
+        </section>
+        <section class="derecha">
+        
+            <div id="resultado">
+                <textarea name="contendedorTexto" id="textoEncriptado" ></textarea>  
+            </div>  
+             <div  id="imagen"> 
+                    <img src="imagenes/encriptar1.png" alt="">
+                        <div class="msj_indicacion">
+                            <h1>Ningún mensaje fue encontrado</h1>
+                            <h6>Ingresa el texto que desees encriptar o desencriptar.</h6>
+                        </div> 
+              </div> 
+                   
+              
+              <div class="boton">
+                    <button type="button" onclick="copiar()" class="boton_C" >Copiar</button>
+              </div>   
+                
+        
+            </section>
+        
     </main>
+    <footer class="pie">
+        <div>
+            <a href="https://github.com/juanmelizalde"> <i class='bx bxl-github bx-md bx-burst-hover' style='color:#0a3871'  > </i></a> 
+            <a href="https://www.linkedin.com/in/juan-manuel-elizalde-921b6954/"><i class='bx bxl-linkedin bx-md bx-burst-hover' style='color:#0a3871'></i></a> 
+            <div class="detalle_footer">
+                <h6> © Copyright Juan Manuel Elizalde</h6> <img src="imagenes/pngegg.png" class="bandera" alt="Argentina">
+            </div>
+        </div>
+        
+    </footer>
         
 </body>
 </html>
